@@ -26,12 +26,11 @@ function App() {
 
   return (
     <p>
-      {/* It's <time dateTime={response}>{response}</time> */}
       <div>{response}</div>
       <div>{count}</div>
-      <div>{dataarray.map(value => value + ",")}</div>
-      <Example value={response}/>
-      {/* <button onClick={() => {setCount(count+1)}}>button</button> */}
+      {/* <div>{dataarray.map(value => value + ",")}</div> */}
+      <Example value={dataarray.map((val, index) => {return {name: index , value: val};})}/>
+      {/* <Example value={response}/> */}
     </p>
   );
 }

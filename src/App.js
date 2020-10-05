@@ -5,11 +5,13 @@ const ENDPOINT = "http://192.168.0.16:4001";
 
 function App() {
   const [response, setResponse] = useState("");
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
     socket.on("FromAPI", data => {
       setResponse(data);
+      setCount(prevCount => prevCount + 1);
     });
 
     // CLEAN UP THE EFFECT
@@ -21,7 +23,9 @@ function App() {
     <p>
       {/* It's <time dateTime={response}>{response}</time> */}
       <div>{response}</div>
+      <div>{count}</div>
       <Example value={response}/>
+      {/* <button onClick={() => {setCount(count+1)}}>button</button> */}
     </p>
   );
 }

@@ -5,8 +5,8 @@ import Example from "./chartU";
 const ENDPOINT = "http://192.168.0.16:4001";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [dataarray, setDataarray] = useState([]);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);

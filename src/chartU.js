@@ -5,20 +5,20 @@ import {
 // import PropTypes from "prop-types";
 
 export default function Example(props) {
-  var data = [
-    {
-      name: 1, value: 10
-    },
-    {
-      name: 2, value: props.value
-    }
-  ]
+  // var data = [
+  //   {
+  //     name: 1, value: 10
+  //   },
+  //   {
+  //     name: 2, value: props.value
+  //   }
+  // ]
 
   return (
     <LineChart
       width={500}
       height={300}
-      data={data}
+      data={props.value}
       margin={{
         top: 5, right: 30, left: 20, bottom: 5,
       }}

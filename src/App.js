@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import socketIOClient from "socket.io-client";
-import Example from "./chartU";
+// import Example from "./chartU";
 const ENDPOINT = "http://192.168.0.16:4001";
 
 function App() {
@@ -28,8 +28,9 @@ function App() {
     <p>
       <div>{response}</div>
       <div>{count}</div>
+      <div>{dataarray}</div>
       {/* <div>{dataarray.map(value => value + ",")}</div> */}
-      <Example value={dataarray.map((val, index) => {return {name: index , value: val};})}/>
+      {/* <Example value={dataarray.map((val, index) => {return {name: index , value: val};})}/> */}
       {/* <Example value={response}/> */}
     </p>
   );

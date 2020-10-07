@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
     socket.on("FromAPI", data => {
-      setDataarray((prevDataarray) => {
+      setDataarray(prevDataarray => {
         prevDataarray[prevDataarray.length] = data;
         return prevDataarray;
       });

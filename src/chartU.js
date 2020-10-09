@@ -3,7 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
-export default function Example(props) {
+export default function ChartU(props) {
 
   return (
     <LineChart
